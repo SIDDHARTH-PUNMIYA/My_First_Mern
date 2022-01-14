@@ -1,0 +1,289 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  --bggradcolor :linear-gradient(90deg, rgba(117,84,160,1) 7%, rgba(117,84,160,1) 17%, rgba(106,95,168,1) 29%, rgba(99,103,174,1) 44%, rgba(87,116,184,1) 66%,
+  rgba(70,135,198,1) 83%, rgba(44,163,219,1) 96%, rgba(22,188,237,1) 100%, rgba(0,212,255,1) 100%);
+}
+body{
+  background-color: rgb(65, 182, 197);
+}
+.navbar{
+  
+background: var(--bggradcolor);
+}
+
+/* Home page starts  */
+.tocent{
+  width: 100%;
+  height: 91vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url(./images/Homebg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 100% 100%;
+}
+.tocent p,h1{
+  color: white;
+}
+
+/* Home page ends  */
+
+
+
+
+
+/* Reg page starts  */
+.regmain{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /* height: 87vh; */
+}
+.reg{
+  width:70%;
+  height: auto;
+  
+background: var(--bggradcolor);
+  margin: 0 5%;
+  margin-top: 3%!important;
+  box-shadow:0px 5px 4px 3px rgba(0, 0, 0, 0.8);
+  
+  padding-bottom: 3%;
+}
+
+.form-control{
+  outline: none;
+  border: 0;
+  background: var(--bggradcolor);
+  border-bottom: 2px solid black;
+}
+.reg .row{
+  margin: 0 1%!important;
+  
+}
+.reg .imgcent{
+  display: flex;
+  align-items: center;
+
+}
+@media screen and (max-width:768px) {
+ .reg .row{
+   display: flex!important;
+   flex-direction: column!important;
+ }
+ .imgcent{
+  margin-top: 6%!important;
+}
+ .reg .row .signupcent{
+   order: 1!important;
+ }
+ .reg{
+  height: auto;
+   margin-bottom: 2%!important;
+ }
+ .signupcent .btn{
+  margin-bottom: 6%!important;
+}
+}
+/* Reg page ends  */
+
+
+
+
+
+/* LOGIN page starts  */
+
+.sign{ 
+  display: grid;
+  align-items: center;
+  margin: 5% 0 0 0!important;
+  width:70%;
+  height: auto;
+  padding: 3% 0 2% 0;
+  background: var(--bggradcolor);
+  box-shadow:0px 5px 4px 3px rgba(0, 0, 0, 0.8);
+}
+.sign .row{
+  margin: 0 1%!important;
+}
+.signhead{
+  margin:  1% 0!important;
+}
+.signincent {
+  margin-top: 9%;
+}
+.signincent .btn{
+  margin:  3% 0!important;
+}
+
+
+@media screen and (max-width:768px) {
+  .sign .row{
+    display: flex!important;
+    flex-direction: column!important;
+  }
+  .sign .row .signincent{
+    order: 1!important;
+  }
+  .sign{
+    margin-top: 12%!important;
+    height: auto;
+    margin-bottom: 2%!important;
+  }
+  .imgincent{
+    margin-top: 6%!important;
+  }
+  .signincent .btn{
+    margin-bottom: 6%!important;
+  }
+ }
+/* LOGIN page ends  */
+
+
+
+
+
+/* Contact page starts  */
+.ourinfo{
+  width: 20%;
+  height: fit-content;
+  box-shadow:0px 5px 4px 3px rgba(0, 0, 0, 0.4);
+display: flex;
+justify-content: flex-start;
+align-items: flex-start;
+flex-direction: column;
+padding: 1% 0 0 3%;
+background: var(--bggradcolor);
+   z-index: -1;
+
+}
+.ourinfo p,h3{
+  font-size: 1.2rem;
+}
+.contactcent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-control::placeholder{
+  color: black;
+  font-size: 0.8rem;
+}
+.incont{
+margin: 2% 0 0 0!important;
+width:70%;
+background: var(--bggradcolor);
+color: black;
+height: auto;
+padding: 5%;
+box-shadow:0px 5px 4px 3px rgba(0, 0, 0, 0.4);
+}
+
+.incont .form-control{
+  border: 1px solid black;
+}
+
+
+@media screen and (max-width:768px) {
+.ourcontact{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.ourinfo{
+  width: 80%;
+  margin-bottom: 3%;
+  height:auto;
+ 
+}
+.incont{
+  height: auto;
+}
+.contactcent{
+  
+  margin-bottom: 6%;
+}
+}
+
+/* Contact page ends  */
+
+
+
+
+/* About page Starts  */
+.aboutcent_main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.aboutcent{
+width:70%;
+background: var(--bggradcolor);
+height: 60vh;
+padding: 5%;
+box-shadow:0px 5px 4px 3px rgba(0, 0, 0, 0.4);
+}
+
+.aboutcent .row .imghandle{
+  margin-left: 21%;
+}
+
+.aboutinfo{
+  margin-top: 10%;
+}
+
+.editbutton{
+  width: fit-content;
+  border-radius: 70%;
+  margin-bottom: 7%;
+  color: orange;
+  background-color: crimson;
+}
+
+@media screen and (max-width:768px) {
+.aboutcent{
+  width: 100%;
+  height: auto;
+  margin: 0 0 5% 0;
+}
+.aboutcent p,h5{
+  font-size: 1rem;
+}
+}
+/* About page ends  */
+
+
+
+/* Error page starts  */
+#notfound{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ height: 90vh;
+}
+.notfound{
+  height: 60vh;
+}
+.notfound_404 h1{
+  z-index: -1;
+  font-size: 10rem;
+  color: red;
+}
+.tohome{
+  width: 100%;
+  text-decoration: none;
+  font-size: larger;
+  text-align: center;
+}
+/* Error page starts  */
+
+
