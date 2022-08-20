@@ -12,6 +12,7 @@ const authenticate= async(req,res,next) => {
             }
             req.token=token; // storing token as req.token so we can use it in router 
             req.userdata = userdata;   // we store data so that we can pass it from server to client
+            // from here we are sending userdata from about and contact server to client about and contact
             req.id = userdata._id;
             next();     // so that it does not stuck in this middleware
 

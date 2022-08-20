@@ -8,8 +8,7 @@ const UserSchema =new mongoose.Schema({
         type:String,
         required:true,
     },
-   
-    email:{
+     email:{
         type:String,
         required:true,
        unique:[true,"email id present already"],
@@ -32,7 +31,6 @@ const UserSchema =new mongoose.Schema({
    password:{
        type:String,
        required:true,
-        
    },
    confirmpassword:{
        type:String,
@@ -50,7 +48,7 @@ default:Date.now()
        
        }
    }],
-   messagedata:[{
+   messagedata:[ {
     name:{
         type:String,
         required:true,
@@ -111,12 +109,10 @@ UserSchema.methods.usermzg =async function (name,email,phone,message) {
         this.messagedata=this.messagedata.concat({name,email,phone,message})
         await this.save();
         return this.messagedata;
-
-    } catch (e) {
+        } catch (e) {
         console.log(e);
     }
 }
-
 
 const User = mongoose.model("User",UserSchema)
 

@@ -50,7 +50,7 @@ const Login = () => {
             window.alert("Login Successfully");
             // using use reducer hook  by using dispatch we call reducer function and pass the payload which in turns change 
             // the state same useState we change setuser and user value is changed eventually
-            dispatch({type:"login",payload:true})
+            dispatch({type:"login",payload:false})
             navigate("/");      
             
                 }

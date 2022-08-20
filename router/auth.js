@@ -28,10 +28,10 @@ router.post("/register", async (req, res) => {
 });
 
 
-
 router.post("/signin", async (req, res) => {
     try {
         // console.log(res);
+        
         const { email, password } = req.body;
         if (!email || !password) {
             res.status(400).send({ "error": "Empty field" })
@@ -39,7 +39,7 @@ router.post("/signin", async (req, res) => {
         const data = await User.findOne({ email: email });
 
         if (data) {
-            const isMatch = await bcrypt.compare(password, data.password);
+            const isMatch = await bcrypt.compare(password , data.password);
             const token = await data.generateAuthToken();
 
 
@@ -71,9 +71,10 @@ router.post("/signin", async (req, res) => {
     }
 
 });
-
+// req.userdata is coming from authenticate.js check that where we are storing data
 // for about pg datafill
 router.get("/about", authenticate, (req, res) => {
+    // console.log(req.userdata);
     res.send(req.userdata); // if we dont write this then there will be nothing to get from the fetch api
     // we send the data which we will be accessing in About by using fetch api in about.js
 })

@@ -29,10 +29,7 @@ const Navbar = () => {
         </li>
         {/* if state is true then logout button is displayed as user is logged in and vice versa using ternary operator */}
      {   state ?
-      <li className="nav-item">
-          <NavLink className="nav-link" to="/logout">Logout</NavLink>
-        </li> :
-          <>
+      <>
         <li className="nav-item">
           <NavLink className="nav-link" to="/login">Login</NavLink>
         </li>
@@ -40,6 +37,10 @@ const Navbar = () => {
           <NavLink className="nav-link" to="/signup">Registration</NavLink>
         </li>
         </>
+        :<li className="nav-item">
+          <NavLink className="nav-link" to="/logout">Logout</NavLink>
+        </li> 
+          
 
      }
        

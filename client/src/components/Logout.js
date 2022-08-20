@@ -21,8 +21,8 @@ const Logout = () => {
             if (res) {
                  // using use reducer hook  by using dispatch we call reducer function and pass the payload which in turns change 
             // the state same useState we change setuser and user value is changed eventually
-          //to false means user has looged out so false value will display login and reg  button when state is used in  navbar 
-                dispatch({type:"login",payload:false})
+          //to true means user has looged out so true value will display login and reg  button when state is used in  navbar 
+                dispatch({type:"login",payload:true})
          
                 nav("/login")
             } else {
