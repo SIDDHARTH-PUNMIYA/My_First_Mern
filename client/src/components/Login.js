@@ -19,6 +19,7 @@ const Login = () => {
         const {name,value}=e.target;
         setlogdata({...logdata,[name]:value});
        }
+
        const confirmdata= async(e)=>{
         e.preventDefault();
         const { email,password}=logdata;
